@@ -1,9 +1,12 @@
-
+import * as Survey from 'survey-react';
+import MySurvey from './components/surveyDisplay/surveyone';
 import './App.css';
 
 function App() {
   return (
-    <h1> SurveyJS practice </h1>
+    <main>
+      <MySurvey />
+    </main>
   );
 }
 
