@@ -5,12 +5,14 @@ import json from "../surveys/questions";
 
 const MySurvey = ({ showCompletedPage }) => {
   return (
-    <Survey.Survey
-      showCompletedPage={false}
-      onComplete={showCompletedPage}
-      // onComplete={data=>console.log(data.valuesHash)}
-      json={json}
-    />
+    <>
+      <Survey.Survey
+        showCompletedPage={false}
+        onComplete={showCompletedPage}
+        // onComplete={data=>console.log(data.valuesHash)}
+        json={json}
+      />
+    </>
   );
 };
 export default MySurvey;

@@ -55,54 +55,6 @@ const json = {
       // ]
     },
     {
-      type: "radiogroup",
-      name: "veteran",
-      title: "Are you a Veteran?",
-      isRequired: true,
-      colCount: 4,
-      choices: [
-        "Non-Veteran",
-        "Veteran-Other",
-        "Service-Disabled Veteran",
-        "Not Disclosed ",
-      ],
-    },
-    {
-      type: "radiogroup",
-      name: "gender",
-      title: "Gender:",
-      isRequired: true,
-      colCount: 4,
-      choices: ["M-Male", "F-Female", "Not Disclosed "],
-    },
-    {
-      type: "radiogroup",
-      name: "race",
-      title: "Race:",
-      isRequired: true,
-      colCount: 4,
-      choices: [
-        "American Indian or Alaska Native",
-        "Asian",
-        "Black or African-American",
-        "Native Hawaiian or Pacific Islander",
-        "White",
-        "Not Disclosed",
-      ],
-    },
-    {
-      type: "radiogroup",
-      name: "ethnicity",
-      title: "What is your Ethnicity?",
-      isRequired: true,
-      colCount: 4,
-      choices: [
-        "Hispanic or Latino",
-        "Not Hispanic or Latino",
-        "Not Disclosed ",
-      ],
-    },
-    {
       type: "checkbox",
       name: "criminal offense 1",
       title:
@@ -137,6 +89,85 @@ const json = {
       isRequired: true,
       colCount: 4,
       choices: ["No", "Yes"],
+    },
+    {
+      type: "matrixdynamic",
+      name: "Owner Information",
+      title:
+        "List proprietors, partners, officers, directors, all holders of outstanding stock. 100% of ownership must be shown. Use separate sheet if necessary. Please reference the above codes to complete this table for each owner of the applicant business. More than one race may be selected.",
+      addRowText: "Add Owner",
+      horizontalScroll: true,
+      columnMinWidth: "130px",
+      columnColCount: 1,
+      // cellType: "radiogroup",
+      // choices: [
+      //   {
+      //     value: 1,
+      //     text: "Yes",
+      //   },
+      //   {
+      //     value: 0,
+      //     text: "Sometimes",
+      //   },
+      //   {
+      //     value: -1,
+      //     text: "No",
+      //   },
+      // ],
+      columns: [
+        {
+          name: "subject",
+          cellType: "text",
+          title: "Owner Name",
+          isRequired: true,
+          minWidth: "300px",
+        },
+        {
+          name: "veteran",
+          celltype: "dropdown",
+          title: "Veteran",
+          choices: [
+            "Non-Veteran",
+            "Veteran-Other",
+            "Service-Disabled Veteran",
+            "Not Disclosed",
+          ],
+        },
+        {
+          name: "Gender",
+          celltype: "dropdown",
+          title: "Gender",
+          choices: ["Female", "Male", "Not Disclosed"],
+        },
+        {
+          name: "Race",
+          celltype: "dropdown",
+          title: "Race",
+          choices: [
+            "American Indian or Alaska Native",
+            "Asian",
+            "Black or African-American",
+            "Native Hawaiian or Pacific Islander",
+            "White",
+            "Not Disclosed",
+          ],
+        },
+        {
+          name: "Ethnicity",
+          celltype: "dropdown",
+          title: "Ethnicity",
+          choices: ["Hispanic or Latino", "Not Disclosed"],
+        },
+
+        {
+          name: "% owned",
+          cellType: "text",
+          title: "% Owned",
+
+          minWidth: "150px",
+        },
+      ],
+      rowCount: 2,
     },
   ],
 };
