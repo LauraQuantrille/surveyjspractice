@@ -1,4 +1,4 @@
-import * as Survey from "survey-react";
+// import * as Survey from "survey-react";
 import SurveyOne from "./components/surveyDisplay/SurveyOne";
 import "./App.css";
 
